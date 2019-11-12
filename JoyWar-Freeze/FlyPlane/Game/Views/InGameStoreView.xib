@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Skranji-Bold.ttf">
+            <string>Skranji-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="InGameStoreView" customModule="Game" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="285" height="461"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StoreWindow" translatesAutoresizingMaskIntoConstraints="NO" id="2rY-2b-bqu">
+                    <rect key="frame" x="0.0" y="0.0" width="285" height="461"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CoinsSymbol" translatesAutoresizingMaskIntoConstraints="NO" id="zj2-PC-7jJ">
+                    <rect key="frame" x="71.666666666666671" y="50" width="142.33333333333331" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="aWK-oI-q9s"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don't have enough coins in wallet! Buy some coins.." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2n-PV-bON">
+                    <rect key="frame" x="16" y="190" width="253" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="wNS-7Y-5dD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Skranji-Bold" family="Skranji" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lnK-Ps-bX3">
+                    <rect key="frame" x="8" y="231" width="267" height="215"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="215" id="nzx-r8-Gj6"/>
+                    </constraints>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBS-Jn-Z4f">
+                    <rect key="frame" x="235" y="30" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="VWQ-sI-aWu"/>
+                        <constraint firstAttribute="width" constant="30" id="sHJ-1a-cpq"/>
+                    </constraints>
+                    <state key="normal" image="Close"/>
+                    <connections>
+                        <action selector="close:" destination="iN0-l3-epB" eventType="touchUpInside" id="xiX-5H-2yc"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hBS-Jn-Z4f" secondAttribute="trailing" constant="20" id="0rq-7l-Vdp"/>
+                <constraint firstItem="hBS-Jn-Z4f" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="A0s-6U-uCu"/>
+                <constraint firstItem="zj2-PC-7jJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="71.5" id="DcO-Bh-Smw"/>
+                <constraint firstItem="2rY-2b-bqu" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="HDW-fR-ktH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="i2n-PV-bON" secondAttribute="trailing" constant="16" id="Ibv-p2-13O"/>
+                <constraint firstItem="i2n-PV-bON" firstAttribute="top" secondItem="zj2-PC-7jJ" secondAttribute="bottom" constant="20" id="Nbn-Fl-e8s"/>
+                <constraint firstItem="zj2-PC-7jJ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="Rmt-EK-L1I"/>
+                <constraint firstItem="2rY-2b-bqu" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Xz4-UW-n84"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lnK-Ps-bX3" secondAttribute="trailing" constant="10" id="av2-UU-7QT"/>
+                <constraint firstItem="2rY-2b-bqu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hYB-vu-pKY"/>
+                <constraint firstItem="i2n-PV-bON" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="mK3-XL-Pxx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zj2-PC-7jJ" secondAttribute="trailing" constant="71" id="meg-Qr-jyy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="lnK-Ps-bX3" secondAttribute="bottom" constant="15" id="ttf-aP-ndE"/>
+                <constraint firstItem="lnK-Ps-bX3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="uOm-wv-7Vb"/>
+                <constraint firstItem="2rY-2b-bqu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ujN-D9-nzO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="productsTableview" destination="lnK-Ps-bX3" id="KN5-kn-4ED"/>
+            </connections>
+            <point key="canvasLocation" x="26.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Close" width="256" height="256"/>
+        <image name="CoinsSymbol" width="1024" height="1024"/>
+        <image name="StoreWindow" width="1138" height="1873"/>
+    </resources>
+</document>
